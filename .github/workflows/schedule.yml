@@ -20,6 +20,7 @@ jobs:
           echo "$(date +"%Y-%m-%d %H:%M:%S")" > updated
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git pull
           git add .
           git commit -m "updated" || exit 0
           git push
